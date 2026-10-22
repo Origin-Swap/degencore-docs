@@ -1,0 +1,141 @@
+/* =========================================================
+   DegenCore VitePress Theme (Cyber & Neon Vibe)
+   ========================================================= */
+
+/* Import Font yang sama dengan DApp */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* --- 1. OVERRIDE VARIABEL WARNA VITEPRESS --- */
+:root {
+  /* Brand Colors (Neon Green) */
+  --vp-c-brand-1: #36FF72;
+  --vp-c-brand-2: #22c55e;
+  --vp-c-brand-3: #16a34a;
+  --vp-c-brand-soft: rgba(54, 255, 114, 0.16);
+
+  /* Font Families */
+  --vp-font-family-base: 'Inter', sans-serif;
+  --vp-font-family-heading: 'Space Grotesk', sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', monospace;
+}
+
+/* Dark Mode Colors (Default & Forced) */
+.dark {
+  --vp-c-bg: #05080f;           /* Background gelap (sama seperti DApp) */
+  --vp-c-bg-alt: #0f1420;       /* Background sidebar/header */
+  --vp-c-bg-elv: #1a2030;       /* Background card/block */
+  --vp-c-bg-soft: #0a0f1a;
+
+  --vp-c-text-1: #ffffff;
+  --vp-c-text-2: #9ca3af;
+  --vp-c-text-3: #6b7280;
+
+  --vp-c-divider: #20293c;
+  --vp-c-border: #2d3850;
+}
+
+/* --- 2. CUSTOM STYLING --- */
+
+/* Judul (Headings) menggunakan Space Grotesk */
+h1, h2, h3, h4, h5, h6, .VPHero .name, .VPHero .text {
+  font-family: var(--vp-font-family-heading) !important;
+  letter-spacing: -0.02em;
+}
+
+/* Hero Section (Halaman Depan) */
+.VPHero {
+  background: radial-gradient(circle at 50% 0%, rgba(54, 255, 114, 0.1) 0%, transparent 50%);
+  padding-bottom: 40px;
+}
+
+/* Efek Teks Glow Neon pada Judul Utama */
+.VPHero .name {
+  color: var(--vp-c-brand-1) !important;
+  text-shadow: 0 0 20px rgba(54, 255, 114, 0.4);
+}
+
+/* Tombol Utama (Get Started) */
+.VPButton.brand {
+  background-color: var(--vp-c-brand-1) !important;
+  color: #05080f !important;
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 0 15px rgba(54, 255, 114, 0.4);
+  transition: all 0.3s ease;
+}
+
+.VPButton.brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(54, 255, 114, 0.7);
+}
+
+/* Tombol Sekunder (View on GitHub) */
+.VPButton.alt {
+  border: 1px solid var(--vp-c-border);
+  background: rgba(255, 255, 255, 0.05);
+}
+.VPButton.alt:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+/* Custom Block (Tips/Warning) */
+.custom-block {
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-border);
+  background: var(--vp-c-bg-elv);
+}
+
+/* Table Styling */
+table {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-border);
+}
+
+th {
+  background-color: var(--vp-c-bg-alt);
+  color: var(--vp-c-brand-1);
+  font-family: var(--vp-font-family-heading);
+  padding: 12px 16px;
+}
+
+td {
+  padding: 12px 16px;
+  border-top: 1px solid var(--vp-c-border);
+}
+
+/* Scrollbar Custom (Neon Green) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-border);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-1);
+}
+
+/* Inline Code (seperti `launch()` atau `0x...dEaD`) */
+:not(pre) > code {
+  background-color: var(--vp-c-bg-elv);
+  color: var(--vp-c-brand-1);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+/* Ikon di Sidebar & Header */
+.VPSidebarItem.is-active .text {
+  color: var(--vp-c-brand-1) !important;
+  font-weight: 600;
+}
